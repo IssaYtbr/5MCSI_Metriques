@@ -14,14 +14,7 @@ def hello_world():
 @app.route("/contact/")
 def MaPremiereAPI():
     return render_template("contact.html")
-  @app.route('/submit-contact', methods=['POST'])
-def submit_contact():
-    nom = request.form['nom']
-    prenom = request.form['prenom']
-    message = request.form['message']
-    # Ici, vous pouvez traiter les données du formulaire, comme les enregistrer dans une base de données ou les envoyer par e-mail.
-    return f"Merci {prenom} {nom}, votre message a été envoyé!"
-                                                                                                                                       
+  
 @app.route('/tawarano/')
 def meteo():
     response = urlopen('https://samples.openweathermap.org/data/2.5/forecast?lat=0&lon=0&appid=xxx')
